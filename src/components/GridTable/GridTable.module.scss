@@ -1,0 +1,127 @@
+.desc {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  max-width: 900px;
+  max-height: 900px;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+
+  background-color: #f8ede7;
+
+  &__item {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    background-color: var(--color-rect-blue);
+    transition: all .3s ease;
+
+    &_blue-init {
+      background-color: var(--color-rect-blue);
+    }
+
+    &_red-init {
+      background-color: var(--color-rect-red);
+    }
+
+    &_blue {
+      background-color: var(--color-rect_fill-blue);
+    }
+
+    &_red {
+      background-color: var(--color-rect_fill-red);
+    }
+
+    &_line {
+      position: absolute;
+      background-color: #fff;
+      cursor: pointer;
+
+      transition: all .2s ease;
+
+      &_blue {
+        background-color: var(--color-line-blue);
+      }
+
+      &_red {
+        background-color: var(--color-line-red);
+      }
+
+      &_fill {
+        background-color: #404344;
+      }
+    }
+
+    &_leftLine,
+    &_rightLine {
+      top: 0;
+      width: 18px;
+      height: 100%;
+    }
+
+    &_leftLine {
+      left: 0;
+      transform: translateX(-50%);
+    }
+
+    &_rightLine {
+      right: 0;
+      transform: translateX(50%);
+    }
+
+    &_topLine,
+    &_bottomLine {
+      left: 0;
+      width: 100%;
+      height: 20px;
+    }
+
+    &_topLine {
+      top: 0;
+      transform: translateY(-50%);
+    }
+
+    &_bottomLine {
+      bottom: 0;
+      transform: translateY(50%);
+    }
+
+    &_circle {
+      position: absolute;
+      z-index: 3;
+      width: 34px;
+      height: 34px;
+
+      background-color: #000;
+      border-radius: 50%;
+      pointer-events: none;
+
+      &_LeftTop {
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+
+      &_LeftBottom {
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, 50%);
+      }
+
+      &_RightTop {
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+
+      &_RightBottom {
+        bottom: 0;
+        right: 0;
+        transform: translate(50%, 50%);
+      }
+    }
+  }
+}

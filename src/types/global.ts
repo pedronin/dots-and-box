@@ -1,0 +1,1 @@
+export type TPlayers = 'blue' | 'red'

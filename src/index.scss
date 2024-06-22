@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-line-red: #fe756e;
+  --color-line-blue: #0ad0fb;
+  
+  --color-rect-red: #f8ede7;
+  --color-rect-blue: #e3ecf3;
+
+  --color-rect_fill-red: #ff5f57;
+  --color-rect_fill-blue: #01c1f0;
+
+  --color-bg-red: #dd8c6e;
+  --color-bg-blue: #3f7cab;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+}
+
+.container {
+  height: 100vh;
+  background-color: var(--color-bg-blue);
+  transition: background-color .3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &._red {
+    background-color: var(--color-bg-red);
+  }
+
+  &._blue {
+    background-color: var(--color-bg-blue);
+  }
+}

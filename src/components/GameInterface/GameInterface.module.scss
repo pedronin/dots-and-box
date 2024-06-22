@@ -1,0 +1,37 @@
+.currentPlayer {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.score {
+  position: fixed;
+  bottom: 100px;
+  left: -45px;
+
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 3px;
+    padding-bottom: 18px;
+    width: 90px;
+    height: 90px;
+
+    transform: rotate(-90deg);
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  &_red {
+    color: var(--color-line-red);
+  }
+
+  &_blue {
+    color: var(--color-line-blue);
+  }
+}
